@@ -5,7 +5,6 @@
 #ifndef SCAVTRAP_H
 #define SCAVTRAP_H
 
-#include <iostream>
 #include "ClapTrap.h"
 
 class ScavTrap : public ClapTrap {

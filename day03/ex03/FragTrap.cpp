@@ -39,6 +39,7 @@ FragTrap::FragTrap( FragTrap const & copy )
 FragTrap::~FragTrap()
 {
 	std::cout << name << ", you are dead " << "(Destructor FragTrap called)" << std::endl;
+	return ;
 }
 
 void FragTrap::fun1ShitAttack( std::string const &target )
@@ -92,8 +93,8 @@ void FragTrap::vaulthunter_dot_exe( std::string const &target )
 	}
 	else
 	{
-		std::cout << "You spent all energy and you have " << this->energyPoints << " energyPoints" << std::endl;
 		this->energyPoints = 0;
+		std::cout << "You spent all energy and you have " << this->energyPoints << " energyPoints" << std::endl;
 	}
 }
 

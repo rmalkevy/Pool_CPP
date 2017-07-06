@@ -23,7 +23,7 @@ ClapTrap::ClapTrap( ClapTrap const & copy )
 
 ClapTrap::~ClapTrap()
 {
-	std::cout << name << ", you are dead " << "(Destructor ClapTrap called)" << std::endl;
+	std::cout << name << ", your parent too dead, hahahaa. I killed everything that you loved...." << "(Destructor ClapTrap called)" << std::endl;
 }
 
 void ClapTrap::beRepaired( unsigned int amount )

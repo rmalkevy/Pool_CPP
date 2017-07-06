@@ -6,7 +6,6 @@
 #define FRAGTRAP_H
 
 #include "ClapTrap.h"
-#include <iostream>
 
 class FragTrap : public ClapTrap{
 

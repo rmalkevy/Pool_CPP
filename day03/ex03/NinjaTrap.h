@@ -13,7 +13,7 @@ public:
 	NinjaTrap(std::string const & name);
 	NinjaTrap(NinjaTrap const & ninjaTrap);
 	~NinjaTrap();
-	void	ninjaShoebox()
+	void	ninjaShoebox(std::string const & target);
 	void	initializationVariables(void);
 };
 #endif

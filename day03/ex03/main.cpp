@@ -3,6 +3,8 @@
 
 #include "FragTrap.h"
 #include "ScavTrap.h"
+#include "NinjaTrap.h"
+#include "ClapTrap.h"
 
 int main (void)
 {
@@ -20,5 +22,11 @@ int main (void)
 	scavTrap.beRepaired(45);
 	scavTrap.takeDamage(32);
 	scavTrap.meleeAttack("Bibor");
+
+	NinjaTrap ninjaTrap("Ninjo");
+	ninjaTrap.meleeAttack("Gobjik");
+	ninjaTrap.takeDamage(56);
+	ninjaTrap.beRepaired(32);
+	ninjaTrap.ninjaShoebox();
 	return (0);
 }
