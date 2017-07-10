@@ -10,7 +10,10 @@
 class PowerFist : public AWeapon
 {
 public:
-	PowerFist(std::string const & name, int apcost, int damage);
+	PowerFist();
+	PowerFist(PowerFist const & powerFist);
 	~PowerFist();
+	void attack() const;
+	PowerFist &operator=(PowerFist const &rhs);
 };
 #endif

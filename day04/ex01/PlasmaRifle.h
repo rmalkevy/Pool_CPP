@@ -5,13 +5,15 @@
 #ifndef PLASMARIFLE_H
 #define PLASMARIFLE_H
 
-#include <iostream>
 #include "AWeapon.h"
 
 class PlasmaRifle : public AWeapon
 {
 public:
-	PlasmaRifle(std::string const & name, int apcost, int damage);
+	PlasmaRifle();
+	PlasmaRifle(PlasmaRifle const & plasmaRifle);
 	~PlasmaRifle();
+	void attack() const;
+	PlasmaRifle &operator=(PlasmaRifle const &rhs);
 };
 #endif

@@ -14,12 +14,15 @@ private:
 	int damage;
 
 public:
+	AWeapon();
 	AWeapon(std::string const & name, int apcost, int damage);
+	AWeapon(AWeapon const & aWeapon);
 	virtual ~AWeapon();
-	std::string virtual getName() const;
+	std::string const getName() const;
 	int getAPCost() const;
 	int getDamage() const;
 	virtual void attack() const = 0;
+	AWeapon &operator=(AWeapon const &rhs);
 };
 
 #endif

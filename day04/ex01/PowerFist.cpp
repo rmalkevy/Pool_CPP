@@ -4,12 +4,30 @@
 
 #include "PowerFist.h"
 
-PowerFist::PowerFist( std::string const &name, int apcost, int damage ) : AWeapon("Power Fist", 50, 8)
+PowerFist::PowerFist() : AWeapon("Power Fist", 8, 50)
 {
-	std::cout << "* pschhh... SBAM! *" << std::endl;
+	return ;
+}
+
+PowerFist::PowerFist(PowerFist const & powerFist)
+{
+	*this = powerFist;
 }
 
 PowerFist::~PowerFist()
 {
 	std::cout << "Destructor PowerFist" << std::endl;
+}
+
+void PowerFist::attack() const
+{
+
+	std::cout << "* pschhh... SBAM! *" << std::endl;
+}
+
+PowerFist& PowerFist::operator=(PowerFist const &rhs)
+{
+	std::cout << "Assignation operator AWeapon called" << std::endl;
+
+	return *this;
 }
