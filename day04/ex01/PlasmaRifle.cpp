@@ -29,5 +29,8 @@ PlasmaRifle& PlasmaRifle::operator=(PlasmaRifle const &rhs)
 {
 	std::cout << "Assignation operator AWeapon called" << std::endl;
 
+	setName(rhs.getName());
+	setAPCost(rhs.getAPCost());
+	setDamage(rhs.getDamage());
 	return *this;
 }

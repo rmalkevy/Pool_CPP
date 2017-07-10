@@ -21,13 +21,17 @@ public:
 	Character(Character const & character);
 	Character(std::string const & name);
 	~Character();
-	void recoverAP();
-	void equip(AWeapon*);
-	void attack(Enemy*);
+	void	recoverAP();
+	void	equip(AWeapon*);
+	void	attack(Enemy*);
 	std::string const getName() const;
-	int getActionPoints() const;
-	AWeapon const *getAWeapon() const;
-	void setActionPoints(int);
+	int		getActionPoints() const;
+	AWeapon	const *getAWeapon() const;
+	Enemy	const *getEnemy() const;
+	void	setName(std::string newName);
+	void	setActionPoints(int newActionPoints);
+	void	setAWeapon(AWeapon *newAWeapon);
+	void	setEnemy(Enemy *newEnemy);
 	Character &operator=(Character const &rhs);
 };
 

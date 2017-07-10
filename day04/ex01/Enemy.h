@@ -17,9 +17,10 @@ public:
 	Enemy(Enemy const & enemy);
 	Enemy(int hp, std::string const & type);
 	virtual ~Enemy();
-	std::string const getType() const;
-	int getHP() const;
-	void	setHP(int newHP);
+	std::string const	getType() const;
+	int					getHP() const;
+	void				setType(std::string const & newType);
+	void				setHP(int newHP);
 	virtual void takeDamage(int);
 	Enemy &operator=(Enemy const &rhs);
 };

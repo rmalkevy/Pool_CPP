@@ -68,13 +68,6 @@ std::string const Character::getName() const
 	return (this->name);
 }
 
-void Character::setActionPoints( int actionPoints)
-{
-	this->actionPoints = actionPoints;
-	if (this->actionPoints < 0)
-		this->actionPoints = 0;
-	return ;
-}
 
 int Character::getActionPoints() const
 {
@@ -86,10 +79,46 @@ AWeapon const *Character::getAWeapon() const
 	return (this->aWeapon);
 }
 
+Enemy	const* Character::getEnemy() const
+{
+	return (this->enemy);
+}
+
+void Character::setName( std::string newName )
+{
+	this->name = newName;
+	return ;
+}
+
+void Character::setAWeapon( AWeapon *newAWeapon )
+{
+	this->aWeapon = newAWeapon;
+	return ;
+}
+
+void Character::setEnemy( Enemy *newEnemy )
+{
+	this->enemy = newEnemy;
+	return ;
+}
+
+void Character::setActionPoints( int actionPoints)
+{
+	this->actionPoints = actionPoints;
+	if (this->actionPoints < 0)
+		this->actionPoints = 0;
+	return ;
+}
+
+
 Character& Character::operator=(Character const &rhs)
 {
-	std::cout << "Assignation operator Character called" << std::endl;
+	std::cout << this->name << " assigned to " << rhs.getName() << std::endl;
 
+	this->setName(rhs.getName());
+	this->setActionPoints(rhs.getActionPoints());
+	this->setAWeapon(rhs.aWeapon);
+	this->setEnemy(rhs.enemy);
 	return *this;
 }
 

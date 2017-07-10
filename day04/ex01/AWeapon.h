@@ -21,6 +21,9 @@ public:
 	std::string const getName() const;
 	int getAPCost() const;
 	int getDamage() const;
+	void setName(std::string const & newName);
+	void	setAPCost(int newAPCost);
+	void	setDamage(int newDamage);
 	virtual void attack() const = 0;
 	AWeapon &operator=(AWeapon const &rhs);
 };

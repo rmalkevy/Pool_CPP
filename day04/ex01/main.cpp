@@ -12,8 +12,10 @@
 
 int main ()
 {
-	Character* zaz = new Character("zaz");
+	Character *zaz = new Character("zaz");
+	Character baz("baz");
 	std::cout << *zaz;
+	std::cout << baz;
 	Enemy* b = new RadScorpion();
 	AWeapon* pr = new PlasmaRifle();
 	AWeapon* pf = new PowerFist();
@@ -34,5 +36,10 @@ int main ()
 	std::cout << *zaz;
 
 	zaz->recoverAP();
+	std::cout << *zaz;
+	std::cout << baz;
+	baz = *zaz;
+	std::cout << *zaz;
+	std::cout << baz;
 	return 0;
 }

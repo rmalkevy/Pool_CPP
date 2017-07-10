@@ -38,6 +38,11 @@ void Enemy::takeDamage( int dam)
 	return ;
 }
 
+std::string const Enemy::getType() const
+{
+	return (this->type);
+}
+
 int Enemy::getHP() const
 {
 	return (this->hp);
@@ -50,12 +55,16 @@ void Enemy::setHP( int newHP )
 		this->hp = 0;
 	return ;
 }
-std::string const Enemy::getType() const
+
+void Enemy::setType( std::string const & newType )
 {
-	return (this->type);
+	this->type = newType;
+	return ;
 }
 
 Enemy& Enemy::operator=( Enemy const &rhs )
 {
+	setType(rhs.getType());
+	setHP(rhs.getHP());
 	return ( *this );
 }

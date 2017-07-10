@@ -28,6 +28,11 @@ AWeapon::~AWeapon()
 	return ;
 }
 
+std::string const AWeapon::getName() const
+{
+	return (this->name);
+}
+
 int AWeapon::getAPCost() const
 {
 	return (this->apcost);
@@ -38,14 +43,30 @@ int AWeapon::getDamage() const
 	return (this->damage);
 }
 
-std::string const AWeapon::getName() const
+void AWeapon::setName( std::string const &newName )
 {
-	return (this->name);
+	this->name = newName;
+	return ;
+}
+
+void AWeapon::setAPCost( int newAPCost )
+{
+	this->apcost = newAPCost;
+	return ;
+}
+
+void AWeapon::setDamage( int newDamage )
+{
+	this->damage = newDamage;
+	return ;
 }
 
 AWeapon& AWeapon::operator=(AWeapon const &rhs)
 {
 	std::cout << "Assignation operator AWeapon called" << std::endl;
 
+	setName(rhs.getName());
+	setAPCost(rhs.getAPCost());
+	setDamage(rhs.getDamage());
 	return *this;
 }

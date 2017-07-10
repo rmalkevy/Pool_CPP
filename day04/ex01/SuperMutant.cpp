@@ -38,6 +38,8 @@ void SuperMutant::takeDamage( int dam)
 
 SuperMutant& SuperMutant::operator=( SuperMutant const &rhs )
 {
-	// щось я тут неправильно зробив
+	setType(rhs.getType());
+	setHP(rhs.getHP());
+
 	return (*this);
 }
