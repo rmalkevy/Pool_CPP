@@ -43,6 +43,13 @@ int Enemy::getHP() const
 	return (this->hp);
 }
 
+void Enemy::setHP( int newHP )
+{
+	this->hp = newHP;
+	if (this->hp < 0)
+		this->hp = 0;
+	return ;
+}
 std::string const Enemy::getType() const
 {
 	return (this->type);

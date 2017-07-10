@@ -32,5 +32,7 @@ int main ()
 
 	zaz->attack(b);
 	std::cout << *zaz;
+
+	zaz->recoverAP();
 	return 0;
 }

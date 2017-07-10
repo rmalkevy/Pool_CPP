@@ -4,12 +4,27 @@
 
 #include "Character.h"
 
+Character::Character()
+{
+	this->actionPoints = 40;
+	this->aWeapon = NULL;
+	this->enemy = NULL;
+	return ;
+}
+
+Character::Character( Character const &character )
+{
+	*this = character;
+	return ;
+}
+
 Character::Character( std::string const &name )
 {
 	this->name = name;
 	this->actionPoints = 40;
 	this->aWeapon = NULL;
 	this->enemy = NULL;
+	return ;
 }
 
 Character::~Character()
@@ -22,6 +37,7 @@ void Character::recoverAP()
 	this->actionPoints += 10;
 	if (this->actionPoints > 40)
 		this->actionPoints = 40;
+	std::cout << this->getName() << " have " << this->getActionPoints() << " HP!"<< std::endl;
 	return ;
 }
 
@@ -34,13 +50,30 @@ void Character::equip( AWeapon * aWeapon1 )
 void Character::attack( Enemy * enemy1 )
 {
 	this->enemy = enemy1;
-
+	if (this->aWeapon != NULL)
+	{
+		std::cout << this->name << " attacks " << enemy1->getType() << " with a ";
+		std::cout << this->aWeapon->getName() << std::endl;
+		this->aWeapon->attack();
+		setActionPoints( this->getActionPoints() - this->aWeapon->getAPCost());
+		enemy1->setHP(enemy1->getHP() - this->aWeapon->getDamage());
+		if (enemy1->getHP() <= 0)
+			delete enemy1;
+	}
 	return ;
 }
 
 std::string const Character::getName() const
 {
 	return (this->name);
+}
+
+void Character::setActionPoints( int actionPoints)
+{
+	this->actionPoints = actionPoints;
+	if (this->actionPoints < 0)
+		this->actionPoints = 0;
+	return ;
 }
 
 int Character::getActionPoints() const

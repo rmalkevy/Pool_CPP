@@ -7,11 +7,13 @@
 
 #include "Enemy.h"
 
-class RadScorpion : public Enemy {
+class RadScorpion : public Enemy
+{
 public:
 	RadScorpion();
 	RadScorpion(RadScorpion const &radScorpion);
 	~RadScorpion();
 	RadScorpion &operator=(RadScorpion const &rhs);
 };
+
 #endif

@@ -17,6 +17,8 @@ private:
 	Enemy *enemy;
 
 public:
+	Character();
+	Character(Character const & character);
 	Character(std::string const & name);
 	~Character();
 	void recoverAP();
@@ -25,6 +27,7 @@ public:
 	std::string const getName() const;
 	int getActionPoints() const;
 	AWeapon const *getAWeapon() const;
+	void setActionPoints(int);
 	Character &operator=(Character const &rhs);
 };
 
