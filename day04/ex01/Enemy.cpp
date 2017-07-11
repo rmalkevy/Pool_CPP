@@ -64,7 +64,7 @@ void Enemy::setType( std::string const & newType )
 
 Enemy& Enemy::operator=( Enemy const &rhs )
 {
-	setType(rhs.getType());
-	setHP(rhs.getHP());
+	this->setType(rhs.getType());
+	this->setHP(rhs.getHP());
 	return ( *this );
 }

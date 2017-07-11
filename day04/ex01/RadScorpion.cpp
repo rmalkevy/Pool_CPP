@@ -24,8 +24,8 @@ RadScorpion::~RadScorpion()
 
 RadScorpion& RadScorpion::operator=( RadScorpion const &rhs )
 {
-	setType(rhs.getType());
-	setHP(rhs.getHP());
+	this->setType(rhs.getType());
+	this->setHP(rhs.getHP());
 
 	return ( *this );
 }
