@@ -5,6 +5,8 @@
 #ifndef ISPACEMARINE_H
 #define ISPACEMARINE_H
 
+#include <iostream>
+
 class ISpaceMarine
 {
 public:

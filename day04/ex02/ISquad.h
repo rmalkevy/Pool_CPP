@@ -6,6 +6,7 @@
 #define ISQUAD_H
 
 #include <iostream>
+#include "ISpaceMarine.h"
 
 class ISquad
 {
