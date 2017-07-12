@@ -1,0 +1,4 @@
+._.DS*
+CMakeLists.txt
+.idea
+cmake-*

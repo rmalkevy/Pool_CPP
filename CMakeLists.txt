@@ -11,5 +11,6 @@ set(SOURCE_FILES day00/ex00/megaphone.cpp
         day00/ex01/contactsGetters.class.cpp
         day01
         day02
-        day03)
+        day03
+        day04)
 add_executable(Pool_C__ ${SOURCE_FILES})

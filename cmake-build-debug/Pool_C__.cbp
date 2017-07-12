@@ -109,6 +109,9 @@
 		<Unit filename="/nfs/2016/r/rmalkevy/Pool_C++/day03">
 			<Option target="Pool_C__"/>
 		</Unit>
+		<Unit filename="/nfs/2016/r/rmalkevy/Pool_C++/day04">
+			<Option target="Pool_C__"/>
+		</Unit>
 		<Unit filename="/nfs/2016/r/rmalkevy/Pool_C++/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
