@@ -6,6 +6,8 @@
 
 Squad::Squad()
 {
+	beginList = new List;
+	endList = new List;
 	this->beginList->next = NULL;
 	this->beginList->elemMarine = NULL;
 	this->endList->elemMarine = NULL;
@@ -22,6 +24,14 @@ Squad::Squad( Squad const &squad )
 
 Squad::~Squad()
 {
+	while (beginList->next)
+	{
+		List *temp = beginList;
+		delete beginList->elemMarine;
+		beginList = beginList->next;
+		delete temp;
+	}
+	delete beginList->elemMarine;
 	return ;
 }
 
@@ -30,13 +40,13 @@ int Squad::getCount() const
 	return (this->numberOfUnits);
 }
 
-ISpaceMarine* Squad::getUnit( int ) const
+ISpaceMarine* Squad::getUnit( int n ) const
 {
 	int i = 0;
-	int count = this->getCount();
 	List *temp;
 	temp = beginList;
-	while (i < count)
+
+	while (i < n)
 	{
 		temp = temp->next;
 		i++;
@@ -49,6 +59,7 @@ int Squad::push( ISpaceMarine *newISpaceMarine)
 	if (this->beginList->elemMarine == NULL)
 	{
 		this->beginList->elemMarine = newISpaceMarine;
+
 		endList = beginList;
 	}
 	else
@@ -60,17 +71,6 @@ int Squad::push( ISpaceMarine *newISpaceMarine)
 
 		endList->next = elem;
 		endList = endList->next;
-
-
-//		List *elem = new List;
-//
-//		elem->elemMarine = newISpaceMarine;
-//		elem->next = NULL;
-//
-//		endList = beginList;
-//		while (endList->next)
-//			endList = endList->next;
-//		endList->next = elem;
 	}
 	this->numberOfUnits++;
 	return ( this->numberOfUnits );

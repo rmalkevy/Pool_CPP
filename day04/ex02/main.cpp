@@ -12,10 +12,12 @@ int main()
 {
 	ISpaceMarine* bob = new TacticalMarine;
 	ISpaceMarine* jim = new AssaultTerminator;
+	ISpaceMarine* vick = new AssaultTerminator;
 
 	ISquad* vlc = new Squad;
 	vlc->push(bob);
 	vlc->push(jim);
+	vlc->push(vick);
 	for (int i = 0; i < vlc->getCount(); ++i)
 	{
 		ISpaceMarine* cur = vlc->getUnit(i);
