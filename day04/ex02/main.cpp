@@ -2,8 +2,6 @@
 // Created by Roman Malkevych on 7/11/17.
 //
 
-//#include "ISquad.h"
-//#include "ISpaceMarine.h"
 #include "Squad.h"
 #include "AssaultTerminator.h"
 #include "TacticalMarine.h"

@@ -10,6 +10,12 @@ AssaultTerminator::AssaultTerminator()
 	return ;
 }
 
+AssaultTerminator::AssaultTerminator( AssaultTerminator const &assaultTerminator )
+{
+	*this = assaultTerminator;
+	return ;
+}
+
 AssaultTerminator::~AssaultTerminator()
 {
 	std::cout << "I’ll be back ..." << std::endl;
@@ -39,4 +45,9 @@ void AssaultTerminator::meleeAttack() const
 {
 	std::cout << "* attacks with chainfists *" << std::endl;
 	return ;
+}
+
+AssaultTerminator& AssaultTerminator::operator=( AssaultTerminator const &rhs )
+{
+	return *this;
 }

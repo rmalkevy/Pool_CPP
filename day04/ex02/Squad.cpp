@@ -82,10 +82,34 @@ void Squad::setNumberOfUnits( int newNumberOfUnits )
 	return ;
 }
 
+void Squad::setBeginList( List *newBeginList )
+{
+	this->beginList = newBeginList;
+	return ;
+}
+
+void Squad::setEndList( List *newEndList )
+{
+	this->endList = newEndList;
+	return ;
+}
+
+List* Squad::getBeginList() const
+{
+	return this->beginList;
+}
+
+List* Squad::getEndList() const
+{
+	return this->endList;
+}
+
 Squad& Squad::operator=(Squad const &rhs)
 {
 	std::cout << "Assignation operator Squad called" << std::endl;
 
 	this->setNumberOfUnits(rhs.getCount());
+	this->setBeginList(rhs.getBeginList());
+	this->setEndList(rhs.getEndList());
 	return *this;
 }
